@@ -1,0 +1,342 @@
+:root {
+    --purple: #a96dd4;
+    --purple-dark: #82368c;
+    --purple-medium: #ba68c8;
+    --purple-light: #decaec;
+    --purple-lightest: #ebdff4;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Header styles */
+.navbar {
+    padding: 15px 0;
+}
+
+.navbar-brand img {
+    max-height: 60px;
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.05);
+}
+
+.nav-link {
+    color: #000;
+    font-weight: 500;
+    margin: 0 10px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--purple);
+}
+
+.nav-link.active {
+    color: #000;
+    border-bottom: 3px solid var(--purple);
+}
+
+.login-btn {
+    background-color: var(--purple-light);
+    color: #000;
+    border-radius: 50px;
+    padding: 8px 20px;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: var(--purple);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Main content styles */
+.main-container {
+    position: relative;
+    padding: 30px 0;
+}
+
+/* Sidebar styles with corrected semi-circle */
+.sidebar {
+    position: relative;
+    z-index: 1;
+    padding: 0;
+}
+
+.sidebar-content {
+    position: relative;
+    padding: 40px 20px;
+    z-index: 2;
+}
+
+.sidebar-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Ellipse%2034%20%283%29-3exIsbHw6tZdt1oqQZYoaiR6dasUl0.png');
+    background-size: contain;
+    background-position: left center;
+    background-repeat: no-repeat;
+    animation: fadeIn 1.5s ease;
+}
+
+.sidebar h2 {
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.form-check {
+    margin-bottom: 15px;
+}
+
+.form-check-input {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.form-check-input:checked {
+    background-color: var(--purple);
+    border-color: var(--purple);
+}
+
+.form-check-label {
+    font-size: 1.1rem;
+    padding-left: 0.5rem;
+}
+
+.see-all-link {
+    color: var(--purple);
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.see-all-link:hover {
+    text-decoration: underline;
+    color: var(--purple-dark);
+}
+
+.illustration {
+    max-width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.illustration:hover {
+    transform: translateY(-5px);
+}
+
+/* Announcement section */
+.announcements-section h1 {
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.announcements-section h1 span {
+    color: var(--purple);
+}
+
+.announcement-card {
+    background-color: var(--purple-light);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.announcement-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.announcement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(169, 109, 212, 0.1);
+}
+
+.announcement-card h3 {
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.announcement-card h3 span {
+    color: var(--purple);
+}
+
+.announcement-card p.organization {
+    font-size: 0.9rem;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.donate-btn {
+    background-color: white;
+    color: var(--purple);
+    border: 1px solid var(--purple);
+    border-radius: 50px;
+    padding: 8px 20px;
+    transition: all 0.3s ease;
+    float: right;
+}
+
+.donate-btn:hover {
+    background-color: var(--purple);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* New card highlight effect */
+.announcement-card.new-card {
+    box-shadow: 0 0 15px rgba(169, 109, 212, 0.7);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 15px rgba(169, 109, 212, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(169, 109, 212, 0.9);
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(169, 109, 212, 0.7);
+    }
+}
+
+/* Custom notification */
+.custom-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: white;
+    border-left: 4px solid var(--purple);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 15px 20px;
+    border-radius: 8px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    animation: slideIn 0.3s ease-out forwards;
+    max-width: 350px;
+}
+
+.notification-icon {
+    color: var(--purple);
+    font-size: 1.2rem;
+}
+
+.notification-content {
+    flex: 1;
+}
+
+.notification-close {
+    background: transparent;
+    border: none;
+    color: #777;
+    font-size: 1.1rem;
+    cursor: pointer;
+    padding: 0;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.notification-close:hover {
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .sidebar {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .navbar-brand img {
+        max-height: 50px;
+    }
+    
+    .announcements-section h1 {
+        font-size: 1.75rem;
+    }
+    
+    .custom-notification {
+        left: 20px;
+        right: 20px;
+        max-width: calc(100% - 40px);
+    }
+}
+
+/* Animation classes */
+.fade-in {
+    animation: fadeIn 1s ease;
+}
+
+.slide-in-right {
+    animation: slideInRight 0.8s ease;
+}
+
+.slide-in-left {
+    animation: slideInLeft 0.8s ease;
+}
+
+.bounce-in {
+    animation: bounceIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    50% { transform: scale(1.05); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}

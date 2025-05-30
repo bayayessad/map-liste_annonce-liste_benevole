@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plateforme de Bénévolat</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Animate.css for animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/donateur/style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <div class="logo-space me-4">
+                <img src="images/logo.png" alt="Logo">
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="#">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Actions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Ramadan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Annonces</a></li>
+                </ul>
+
+                <!-- Menu utilisateur style pilule -->
+                <div class="dropdown ms-auto">
+                    <button class="pill-dropdown-btn" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <div class="profile-icon"></div>
+                        <i class="bi bi-chevron-down" style="color: #6c757d;"></i>
+                    </button>
+
+                    <div class="dropdown-menu dropdown-menu-end p-3" aria-labelledby="userDropdown">
+                        <div class="mb-2">
+                            <strong>Nom et prénom</strong><br>
+                            <small>nomprénom@gmail.com</small>
+                        </div>
+                        <hr>
+                        <a class="dropdown-item d-flex align-items-center" href="#"><i class="bi bi-person me-2"></i> Profil</a>
+                        <a class="dropdown-item d-flex align-items-center" href="#"><i class="bi bi-diagram-3 me-2"></i> Mon espace Bénévole</a>
+                        <a class="dropdown-item d-flex align-items-center" href="#"><i class="bi bi-envelope-open-heart me-2"></i> Demander un don</a>
+                        <a class="dropdown-item d-flex align-items-center" href="#"><i class="bi bi-cash-coin me-2"></i> faire un don</a>
+                        <a class="dropdown-item d-flex align-items-center" href="#"><i class="bi bi-people me-2"></i> Devenir Bénévole</a>
+                        <a class="dropdown-item d-flex align-items-center" href="#"><i class="bi bi-box-arrow-right me-2"></i> Se déconnecter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+        <div class="container">
+            <div class="row">
+                <!-- Left Sidebar -->
+                <div class="col-lg-4 sidebar slide-in-left">
+                    <div class="sidebar-content">
+                        <div class="sidebar-bg"></div>
+                        <h2>Que souhaitez vous consulter</h2>
+                        
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="announcementType" id="benevoles" checked>
+                            <label class="form-check-label" for="benevoles">
+                                Annonces de bénévolats
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="announcementType" id="besoins" >
+                            <label class="form-check-label" for="besoins">
+                                Annoces de besoins
+                            </label>
+                        </div>
+                        
+                        <a href="#" class="see-all-link">Voir toutes les annonces</a>
+                        
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Charity-bro%202%20%281%29-7QarG76ciU9xl3mC6iIZ2SWF9xgI2M.png" alt="Volunteers" class="illustration">
+                    </div>
+                </div>
+                
+                <!-- Right Content -->
+                <div class="col-lg-8 announcements-section">
+                    <h1 class="fade-in">Découvrez les annonces de bénévolat de la <span>Daira de Adekar</span></h1>
+                    
+                    <!-- Announcement Cards -->
+                    <div class="announcement-card fade-in" style="animation-delay: 0.2s;">
+                        <h3>Nettoyage de quartier - <span>Bouzeguène</span></h3>
+                        <p class="organization">Lancé par l'association Main solidaire</p>
+                        <p>Rejoignez l'équipe de jeunes volontaires le 22 Aout pour nettoyer les rues du quartier Bouzeguène. Gants et sacs fournis.</p>
+                        <button class="btn apply-btn">Postuler à cette annonce</button>
+                        <div class="clearfix"></div>
+                    </div>
+                    
+                    <div class="announcement-card fade-in" style="animation-delay: 0.4s;">
+                        <h3>Soutien scolaire - <span>Maison de jeunes</span></h3>
+                        <p class="organization">Lancé par l'assication El Khir</p>
+                        <p>L'association Jeunes Solidaires cherche des bénévoles pour aider des collégiens en maths et français, 2 fois par semaine après 17h.</p>
+                        <button class="btn apply-btn">Postuler à cette annonce</button>
+                        <div class="clearfix"></div>
+                    </div>
+                    
+                    <div class="announcement-card fade-in" style="animation-delay: 0.6s;">
+                        <h3>Ateliers créatifs - <span>Centre culturel</span></h3>
+                        <p class="organization">Lancé par l'association Solidarité familiale</p>
+                        <p>Des bénévoles sont recherchés pour animer des ateliers de dessin et bricolage pour enfants, chaque mercredi après-midi à Adekar</p>
+                        <button class="btn apply-btn">Postuler à cette annonce</button>
+                        <div class="clearfix"></div>
+                    </div>
+                    
+                    <div class="announcement-card fade-in" style="animation-delay: 0.8s;">
+                        <h3>Plantation d'arbres - <span>Bord du stade communal</span></h3>
+                        <p class="organization">Lancé par l'association Jeunes solidaire</p>
+                        <p>Participez à une journée écologique pour planter des arbres avec l'association Rahma, le 3 juin dès 8h.</p>
+                        <button class="btn apply-btn">Postuler à cette annonce</button>
+                        <div class="clearfix"></div>
+                    </div>
+                    
+                    <div class="announcement-card fade-in" style="animation-delay: 1s;">
+                        <h3>Aide administrative - <span>Quartier ighil oumsed</span></h3>
+                        <p class="organization">Lancé par l'association les coeurs unis</p>
+                        <p>Besoin de bénévoles pour classer des dossiers et aider à la gestion des inscriptions au siège de l'association, chaque fin de semaine.</p>
+                        <button class="btn apply-btn">Postuler à cette annonce</button>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="/donateur/javascript.js"></script>
+    <script> document.addEventListener("DOMContentLoaded", () => {
+  const radioButtons = document.querySelectorAll('input[name="announcementType"]')
+
+  radioButtons.forEach((radio) => {
+    radio.addEventListener("click", function () {
+      if (this.id === "benevoles") {
+        window.location.href = "./index.html"
+      } else if (this.id === "besoins") {
+        window.location.href = "./index2.html"
+      }
+    })
+  })
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+/* Main Colors */
+:root {
+    --purple-primary: #a96dd4;
+    --purple-light: #decaec;
+    --purple-dark: #82368c;
+    --text-dark: #070707;
+    --text-light: #ffffff;
+}
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-dark);
+    overflow-x: hidden;
+    position: relative;
+}
+
+.main-container {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+
+/* Logo */
+.logo img {
+    height: 80px;
+    width: auto;
+}
+
+/* Navigation */
+.main-nav .nav-link {
+    color: var(--text-dark);
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0 1.5rem;
+    padding: 0.5rem 0;
+    transition: all 0.3s ease;
+}
+
+.main-nav .nav-link:hover {
+    color: var(--purple-primary);
+}
+
+.main-nav .nav-link.active {
+    color: var(--text-dark);
+    border-bottom: 4px solid var(--purple-primary);
+    font-weight: 600;
+}
+
+/* Login Button */
+.login-btn {
+    background-color: var(--purple-light);
+    color: var(--text-dark);
+    border-radius: 50px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: var(--purple-primary);
+    color: var(--text-light);
+}
+
+.login-btn svg {
+    margin-right: 0.5rem;
+}
+
+/* Content Styles */
+.content-left {
+    padding: 2rem 0;
+    position: relative;
+    z-index: 1;
+}
+
+.main-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.secondary-title {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.text-purple {
+    color: var(--purple-primary);
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.instruction-text {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.illustration-container {
+    margin-top: -15rem;
+
+}
+
+/* Map Styles */
+.map-container {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+#bejaia-map {
+    width: 100%;
+    height: auto;
+}
+
+.region {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.region path {
+    fill: white;
+    stroke: var(--purple-primary);
+    stroke-width: 2;
+}
+
+.region:hover path {
+    fill: var(--purple-light);
+}
+
+.region.active path {
+    fill: var(--purple-primary);
+}
+
+.region text {
+    fill: var(--purple-primary);
+    font-size: 12px;
+    font-weight: 600;
+    text-anchor: middle;
+    pointer-events: none;
+}
+
+/* Modal Styles */
+.modal-content {
+    border-radius: 15px;
+    border: none;
+}
+
+.modal-header {
+    border-bottom: none;
+    padding: 1.5rem 1.5rem 0.5rem;
+}
+
+.modal-footer {
+    border-top: none;
+    padding: 0.5rem 1.5rem 1.5rem;
+}
+
+.modal-title {
+    color: var(--purple-dark);
+    font-weight: 600;
+}
+
+.btn-primary {
+    background-color: #0d6efd;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 2rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .purple-circle {
+        width: 700px;
+        height: 700px;
+        left: -350px;
+    }
+    
+    .main-title {
+        font-size: 2.2rem;
+    }
+    
+    .secondary-title {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .purple-circle {
+        width: 600px;
+        height: 600px;
+        left: -300px;
+    }
+    
+    .main-nav {
+        margin-top: 1rem;
+    }
+    
+    .main-nav .nav-link {
+        margin: 0 0.75rem;
+    }
+    
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    .secondary-title {
+        font-size: 1.6rem;
+        margin-top: 2rem;
+    }
+    
+    .login-btn {
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .purple-circle {
+        width: 500px;
+        height: 500px;
+        left: -250px;
+    }
+    
+    .main-title {
+        font-size: 1.8rem;
+    }
+    
+    .secondary-title {
+        font-size: 1.4rem;
+    }
+    
+    .subtitle, .instruction-text {
+        font-size: 1rem;
+    }
+}
